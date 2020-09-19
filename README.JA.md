@@ -19,10 +19,9 @@ README: [中文](https://github.com/voosc/fubuki-button/blob/master/README.md) |
 
 ## 計画中の機能
 
-- fubukitap([mikutap](https://aidn.jp/mikutap/) に類似)
-- 生放送や動画のカレンダーを表示
-- フブキのスタンプ/ミーム
-- YouTube/Bilibiliのデータを表示
+- 使用TypeScript / Vue 3.x重构项目，至少包含现有全部的功能
+- 进一步抽象出配置文件，方便其他按钮移植和维护
+- 增加音频管理后端、用户收藏等
 
 ## このプロジェクトへの貢献(コントリビュート)
 

@@ -19,10 +19,9 @@ Related Links:
 
 ## Planning to do
 
-- fubukitap(Similar to [mikutap](https://aidn.jp/mikutap/))
-- Calender of lives / activities
-- Memes for Fubuki
-- Data visualization of Youtube / Bilibili
+- Refactor whole project with TypeScript / Vue 3.x
+- Extract a config file of functions to simplify targeting other button project
+- Add a backend to manage voice items and user favorites or whatever
 
 ## Contributing
 

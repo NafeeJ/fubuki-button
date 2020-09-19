@@ -19,10 +19,9 @@ README: **中文** | [日本語](https://github.com/voosc/fubuki-button/blob/mas
 
 ## 计划中的特性
 
-- fubukitap(类似[mikutap](https://aidn.jp/mikutap/))
-- 直播/活动日历
-- 吹雪表情包合集/搜索
-- YouTube/Bilibili数据可视化
+- 使用TypeScript / Vue 3.x重构项目，至少包含现有全部的功能
+- 进一步抽象出配置文件，方便其他按钮移植和维护
+- 增加音频管理后端、用户收藏等
 
 ## 参与完善本项目
 
