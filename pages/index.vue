@@ -67,26 +67,28 @@
           </v-icon>
           {{ $t('live.activity') }}
         </v-card-title>
-        <v-card-text>
-          <!-- 正在直播 -->
-          <div v-for="live in lives" :key="live.id">
-            <div v-if="live.title.length" :class="dark_text">
-              <span class="warning--text">{{ $t('live.on_air') }}</span>
-              <youtube-link :video-key="live.yt_video_key" :content="live.title" class="error--text" />
+        <SkeletonLoading :loading="lives_loading">
+          <v-card-text>
+            <!-- 正在直播 -->
+            <div v-for="live in lives" :key="live.id">
+              <div v-if="live.title.length" :class="dark_text">
+                <span class="warning--text">{{ $t('live.on_air') }}</span>
+                <youtube-link :video-key="live.yt_video_key" :content="live.title" class="error--text" />
+              </div>
             </div>
-          </div>
-          <!-- 计划中的直播 -->
-          <div v-for="live in upcoming_lives" :key="live.id">
-            <div v-if="live.title.length" :class="dark_text">
-              <span>{{ $t('live.schedule') + format_time(live.live_schedule) }}</span>
-              <youtube-link :video-key="live.yt_video_key" :content="live.title" />
+            <!-- 计划中的直播 -->
+            <div v-for="live in upcoming_lives" :key="live.id">
+              <div v-if="live.title.length" :class="dark_text">
+                <span>{{ $t('live.schedule') + format_time(live.live_schedule) }}</span>
+                <youtube-link :video-key="live.yt_video_key" :content="live.title" />
+              </div>
             </div>
-          </div>
-          <div v-if="lives.length === 0 && upcoming_lives.length === 0">
-            <p>{{ lives_loading ? $t('live.loading') : $t('live.no_schedule') }}</p>
-          </div>
-          <div class="notification-board" v-html="$md.render($t('live.notification'))"></div>
-        </v-card-text>
+            <div v-if="lives.length === 0 && upcoming_lives.length === 0">
+              <p>{{ lives_loading ? $t('live.loading') : $t('live.no_schedule') }}</p>
+            </div>
+            <div class="notification-board" v-html="$md.render($t('live.notification'))"></div>
+          </v-card-text>
+        </SkeletonLoading>
       </v-card>
       <!-- 对每个按钮组生成一个Card -->
       <v-card v-for="group in groups" :key="group.name">
@@ -146,6 +148,7 @@ import voice_lists from '~/assets/voices.json';
 import DevWarning from '../components/DevWarning';
 import VoiceBtn from '../components/VoiceBtn';
 import YoutubeLink from '../components/YoutubeLink';
+import SkeletonLoading from '../components/SkeletonLoading';
 import {
   mdiClockOutline,
   mdiClose,
@@ -161,7 +164,8 @@ export default {
   components: {
     YoutubeLink,
     VoiceBtn,
-    DevWarning
+    DevWarning,
+    SkeletonLoading
   },
   data() {
     return {
@@ -358,7 +362,7 @@ export default {
         clear_timer();
         this.now_playing.delete(audio);
         //}
-        if('mediaSession' in navigator) {
+        if ('mediaSession' in navigator) {
           navigator.mediaSession.playbackState = 'paused';
         }
       });
