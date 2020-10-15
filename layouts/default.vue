@@ -47,7 +47,6 @@
             :href="item.to"
             target="_blank"
             rel="noreferrer"
-            :download="item.title.includes('FubuMio') ? 'FubuMio头像框.png' : ''"
           >
             <v-list-item-action>
               <v-icon>{{ icons[item.icon] }}</v-icon>
@@ -278,19 +277,9 @@ export default {
       ],
       external_cn: [
         {
-          icon: 'account',
-          title: 'FubuMio贴贴限时头像框',
-          to: '/fubumio头像框.png'
-        },
-        {
           icon: 'alpha_b_box',
           title: '御宅白狐的狐笋之林',
           to: 'https://space.bilibili.com/314977548'
-        },
-        {
-          icon: 'newspaper',
-          title: '白上吹雪周报',
-          to: 'https://space.bilibili.com/487763794/article'
         }
       ]
     };
