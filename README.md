@@ -7,7 +7,11 @@
 
 README: **中文** | [日本語](https://github.com/voosc/fubuki-button/blob/master/README.JA.md) | [English](https://github.com/voosc/fubuki-button/blob/master/README.EN.md)
 
-> 全新的白上吹雪语音按钮，目标是打造一个整合白上吹雪各个方面的应援项目
+**由于Cover Crop及其Hololive子公司对桐生可可涉台问题毫无作为，处理方式极其不专业不妥当，一次又一次突破我们的底线，以及白上吹雪对此次事件的态度也基本明朗，我们决定关闭狐按钮的访问并永久停更这个项目。**
+
+**Due to Cover Crop and its Hololive subsidiary's inaction and extremely unprofessional and inappropriate handling of Kiryuu Coco's involvement in Taiwan, which has broken our boundaries time and time again, as well as Shirakami Fubuki's generally clear attitude towards this incident, we have decided to shut down access to the fubuki button and permanently suspend the project.**
+
+**（グーグル翻訳）桐生ココアの台湾への関与について、カバークロップとそのホロライブ子会社の不作為と極めて非専門的かつ不適切な対応により、何度も我々の境界線を破ってきたことと、今回の事件に対する白上フブキの態度により、フブキボタンへのアクセスを停止し、プロジェクトを永久に停止することを決定しました。**
 
 项目地址： https://fubuki.moe
 
