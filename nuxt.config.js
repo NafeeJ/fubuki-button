@@ -5,6 +5,9 @@ const is_production = process.env.NODE_ENV === 'production';
 export default {
   mode: 'universal',
   target: 'static',
+  router: {
+    base: '/fubuki-button/'
+  },
   server: {
     port: 3000, // default: 3000
     host: 'localhost' // default: localhost
